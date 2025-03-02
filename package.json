@@ -2,7 +2,7 @@
 	"name": "react-terminal-portfolio",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://shloksomani.github.io/react-terminal-portfolio",
+	"homepage": "/",
 	"dependencies": {
 		"react": "^16.11.0",
 		"react-dom": "^16.11.0",
