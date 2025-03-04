@@ -18,7 +18,9 @@ export class Cat extends Component {
 		education:
 			"anne's currently a high school senior based in new delhi, india. while previously a cbse student, she now follows the general american public school curicullum with classes mostly geared towards STEM & technology. \n \nas someone who hopes to go to law school and eventually establish a career as a white-collar criminal defense lawyer, she has an avid interest in criminal law & data privacy and will be pursuing a degree in computer science + criminal justice at virginia tech starting this fall. \n \nshe's affiliated with girls who code (summer program attendee), kode with klossy ('23 global scholar) & wicys + am an intern at wisp (aka women in security and privacy) and volunteer at anitab.org.",
 
-		projectinfo: "between school, bootcamps, hackclub, hackathons/competitions and personal projects, i'm currently juggling between a lot of coding-aligned things, some of which are merely practice sums while some are full-blown projects and ideas that i've been trying to bring to life. \n \nat hack club, im trying my best to meet the deadlines for projects like #raspapi and #blackbox and #retrospect v2 and some more elaborate and time consuming projects like a game for #juice, a #hackpad v2 project (including pcbs, design & firmware) and a whole 3d printer for #infill. \n \ni have a few projects planned out for myself (a club leader management platform, cnc pen plotter & mini projector,) and for my entire club (a cyberdeck with #hackpac or #multiverse funding). i'm making proposals to work on getting new ysws programs hq approved and pitching/collaborating for ideas for events that are open-to-all or for smth like athena/dos :D",
+			projectinfo: "between school, bootcamps, hackclub, hackathons/competitions and personal projects, i'm currently juggling between a lot of coding-aligned things, some of which are merely practice sums while some are full-blown projects and ideas that i've been trying to bring to life. \n \nat hack club, im trying my best to meet the deadlines for projects like #raspapi and #blackbox and #retrospect v2 and some more elaborate and time consuming projects like a game for #juice, a #hackpad v2 project (including pcbs, design & firmware) and a whole 3d printer for #infill. \n \ni have a few projects planned out for myself (a club leader management platform, cnc pen plotter & mini projector,) and for my entire club (a cyberdeck with #hackpac or #multiverse funding). i'm making proposals to work on getting new ysws programs hq approved and pitching/collaborating for ideas for events that are open-to-all or for smth like athena/dos :D",
+
+			techstack: "programming - python, react js, p5.js, html/css/js \n \ndesign - figma, canva, procreate, inkscape, aseprite \n \nother - kicad, blender, fusion 360, tinkercad",
 		projects:
 		[ 
 			{
@@ -62,7 +64,8 @@ export class Cat extends Component {
 				return <p className="result">{this.information.about}</p>;
 			} else if (lower === "education") {
 				return <p className="result">{this.information.education}</p>;
-			} else if (lower === "education") {
+			} else if (lower === "techstack") {
+				return <p className="result">{this.information.techstack}</p>;
 			} else if (lower === "projects" || lower === "project") {
 				return (
 					<React.Fragment>

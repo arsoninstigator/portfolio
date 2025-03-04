@@ -37,6 +37,10 @@ export class Page extends Component {
 				type: "education.txt"
 			},
 			{
+				id: 19,
+				type: "techstack.txt"
+			},
+			{
 				id: 16,
 				type: "projects.txt"
 			},
