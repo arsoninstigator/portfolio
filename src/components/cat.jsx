@@ -20,7 +20,7 @@ export class Cat extends Component {
 
 			projectinfo: "between school, bootcamps, hackclub, hackathons/competitions and personal projects, i'm currently juggling between a lot of coding-aligned things, some of which are merely practice sums while some are full-blown projects and ideas that i've been trying to bring to life. \n \nat hack club, im trying my best to meet the deadlines for projects like #raspapi and #blackbox and #retrospect v2 and some more elaborate and time consuming projects like a game for #juice, a #hackpad v2 project (including pcbs, design & firmware) and a whole 3d printer for #infill. \n \ni have a few projects planned out for myself (a club leader management platform, cnc pen plotter & mini projector,) and for my entire club (a cyberdeck with #hackpac or #multiverse funding). i'm making proposals to work on getting new ysws programs hq approved and pitching/collaborating for ideas for events that are open-to-all or for smth like athena/dos :D",
 
-			techstack: "programming - python, react js, p5.js, html/css/js \n \ndesign - figma, canva, procreate, inkscape, aseprite \n \nother - kicad, blender, fusion 360, tinkercad",
+			techstack: "programming - python, react js, p5.js, html/css/js \n \ndesign - figma, canva, procreate, inkscape, aseprite \n \nother - kicad, blender, fusion 360, tinkercad, audacity",
 		projects:
 		[ 
 			{
