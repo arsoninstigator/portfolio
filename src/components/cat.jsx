@@ -14,13 +14,13 @@ export class Cat extends Component {
 
 	information = {
 		about:
-			"anne (she/her) is an eighteen year old high school senior from india who joined hack club in july '24 during arcade and has been an active member of the community ever since. \n \nshe's the founder and club leader for the girls-in-tech club 'code & cipher', was the lead organizer for counterspell delhi and is currently organizing scrapyard's satellite event in delhi on march 15. \n \nwith interests in design (2d & 3d), front-end web development, hardware, cybersecurity and cyberspace law, she has worked on projects combining her love for art (illustration, music production, film) and programming.",
+			"i'm anne (she/her), an eighteen year old high school senior living in india. i  joined hack club in july '24 during arcade and have been an active member of the community ever since. \n \ni'm a club leader for the girls-in-tech club 'code and cipher', was the lead organizer for counterspell delhi and scrapyard delhi, & hosted the delhi tavern. \n \ni love all things tech and have an interest in design, web development, hardware, cybersecurity and law. i've also worked on projects combining my love for art (illustration, music production, film) and programming.",
 		education:
-			"anne's currently a high school senior based in new delhi, india. while previously a cbse student, she now follows the general american public school curicullum with classes mostly geared towards STEM & technology. \n \nas someone who hopes to go to law school and eventually establish a career as a white-collar criminal defense lawyer, she has an avid interest in criminal law & data privacy and will be pursuing a degree in computer science + criminal justice at virginia tech starting this fall. \n \nshe's affiliated with girls who code (summer program attendee), kode with klossy ('23 global scholar) & wicys + am an intern at wisp (aka women in security and privacy) and volunteer at anitab.org.",
+			"i'm currently a high school senior based in new delhi, india. while previously a cbse student, i now follow the general american school curicullum with classes mostly geared towards STEM & technology. \n \ni will be pursuing a degree in computer science + criminal justice at virginia tech this year onwards and am someone who hopes to go to law school and eventually establish a career as a white-collar criminal defense attorney.  \n \ni'm affiliated with girls who code, was a kode with klossy '23 global scholar, a wicys & rtc member and a volunteer at wisp & anitab.org.",
 
-			projectinfo: "between school, bootcamps, hackclub, hackathons/competitions and personal projects, i'm currently juggling between a lot of coding-aligned things, some of which are merely practice sums while some are full-blown projects and ideas that i've been trying to bring to life. \n \nat hack club, im trying my best to meet the deadlines for projects like #raspapi and #blackbox and #retrospect v2 and some more elaborate and time consuming projects like a game for #juice, a #hackpad v2 project (including pcbs, design & firmware) and a whole 3d printer for #infill. \n \ni have a few projects planned out for myself (a club leader management platform, cnc pen plotter & mini projector,) and for my entire club (a cyberdeck with #hackpac or #multiverse funding). i'm making proposals to work on getting new ysws programs hq approved and pitching/collaborating for ideas for events that are open-to-all or for smth like athena/dos :D",
+			projectinfo: "between school, bootcamps, hackclub, hackathons/competitions and personal projects, i'm currently juggling a lot of things including some full-blown projects and ideas that i've been trying to bring to life. \n \nat hack club, i regularly try to participate in you ship we ship programs, even if they require skills i do not posess (yet). right now i'm working on some beta events, #bakebuild, #pixeldust and #jungle and build larger projects including #infill, #apex \n \ni have a mix of hardware and software projects planned out for myself and for my club and i'm also making proposals to work on getting new ysws programs hq approved and pitching/collaborating for ideas for upcoming community led events :D",
 
-			techstack: "programming - python, react js, p5.js, html/css/js \n \ndesign - figma, canva, procreate, inkscape, aseprite \n \nother - kicad, blender, fusion 360, tinkercad, audacity",
+			techstack: "programming - python, react, tailwind, html/css/js \n \ndesign - figma, canva, procreate, inkscape, aseprite \n \nother - kicad, blender, fusion, tinkercad, audacity \n \nadditional interests - cybersecurity, criminal law, forensics, data privacy, economics and linguistics",
 		projects:
 		[ 
 			{
@@ -36,16 +36,16 @@ export class Cat extends Component {
 		],
 		social: [
 			{
-				platform: "github @ arsoninstigator",
+				platform: "github",
 				link: "https://github.com/arsoninstigator"
 			},
 
 			{
-				platform: "buy me a coffee on ko-fi",
+				platform: "buymeacoffee",
 				link: "https://ko-fi.com/fairyluv"
 			}
 		],
-		socials: "you can reach out to me via email at arsoninstigator@proton.me, send me a text on slack (i go by @anne there) or contact me via discord/signal (ask in dms)! my github @arsoninstigator desperately needs an overhaul but we're gonna pretend it's not absolutely all over the place. \n \nmy dms are open so feel free to just yap about anything and everything, including  rants, gossip, something work/school related or even ask for general advice on stuff. hmu anytime to fangirl over taylor swift or discuss puzzles, murder mysteries & true crime related media. also please do send me information on scholarships, internship opportunities, summer programs or other opportunities if you can :3"
+		socials: "you can reach out to me via email at arsoninstigator@proton.me, send me a text on the hc slack or contact me via discord/signal (ask in dms). \n \nmy dms are open so feel free to just yap about literally anything. also please  send me information on any scholarships, internship opportunities, summer programs or other opportunities if you can :3"
 	};
 	render() {
 		return (
@@ -94,26 +94,33 @@ export class Cat extends Component {
 			) {
 				return (
 					<React.Fragment>
-					<p className="result">{this.information.socials}</p>
-						{this.information.social.map(everySocial => {
-							return (
-								<p className="result">
-									<a href={everySocial.link} target="_blank">
-										{everySocial.platform}
-									</a>
-									<a href="https://github.com/arsoninstigator" target="_blank">
-										<img src={githubLogo} alt="GithubLink to Code" />
-									</a>
-								</p>
-							);
-						})}
+					
+					<p className="result">
+                {this.information.socials.split("\n").map((line, idx) => (
+                    <React.Fragment key={idx}>
+                        {line}
+                        <br />
+                    </React.Fragment>
+                ))}
+            </p>
+            <p className="result">
+                {this.information.social.map((everySocial, index) => (
+                    <React.Fragment key={index}>
+                        {index === 0 ? "you can also find me on " : ""}
+                        <a href={everySocial.link} target="_blank" rel="noopener noreferrer">
+                            {everySocial.platform}
+                        </a>
+                        {index !== this.information.social.length - 1 ? " (pretend this doesnt need to be completely overhauled) and " : "(where you can donate $$ to support me or my club)."}
+                    </React.Fragment>
+                ))}
+            </p>
 					</React.Fragment>
 				);
 			} else {
-				return <p className="result">oops wrong input</p>;
+				return <p className="result">oops, wrong input</p>;
 			}
 		} else {
-			return <p className="result">oops wrong input</p>;
+			return <p className="result">oops, wrong input</p>;
 		}
 	};
 }
